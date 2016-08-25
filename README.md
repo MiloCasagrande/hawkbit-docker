@@ -11,8 +11,8 @@ files.
 
 Look at the [application.properties](./application.properties) file and change:
 
-* Default RabbitMQ username and password (`spring.rabbitmq.username` `spring.rabbitmq.password`) (if different).
-* MariaDB URL, username and password (`spring.datasource.url` `spring.datasource.username` `spring.datasource.password`), and the name of the database used.
+* Default RabbitMQ username and password (`spring.rabbitmq.username`, `spring.rabbitmq.password`) (if different).
+* MariaDB URL, username and password (`spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`), and the name of the database used.
 * MongoDB URI (`spring.data.mongodb`).
 * The Hawkbit password and user (`hawkbit.server.ui.demo.password`, `hawkbit.server.ui.demo.user`).
 
