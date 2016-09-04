@@ -38,6 +38,15 @@ Once the container is up and running and the application started (in can take
 ~20 seconds for the application to start), head to http://localhost:8080/UI and
 login with the Hawkbit username and password configured (by default admin/admin).
 
+To run Hawkbit with a customized properties file, just bind mount your custom application.properties file when running the container:
+
+    docker run -d -t --name hawkbit --link mariadb:mysql -v application.properties:/srv/application.properties -p 8080:8080 milocasagrande/hawkbit-docker
+
+You can also bind mount the mongodb database, to store the data outside the container:
+
+    docker run -d -t --name hawkbit --link mariadb:mysql -v /srv/hawkbit/mongodb:/data/db -p 8080:8080 milocasagrande/hawkbit-docker
+
+
 From here on:
 
 > Hic sunt dracones
